@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+    <meta name="description" content="Vorz Digital membantu bisnis berkembang lewat website profesional dan aplikasi yang dirancang sesuai kebutuhan.">
+    <title>Vorz Digital — Website & Aplikasi untuk Bisnis</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#e50914',
+                            deepRed: '#990000',
+                            bg: '#080808',
+                            card: '#121212',
+                            border: '#222222',
+                            textMuted: '#999999'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Bebas Neue', 'Oswald', 'sans-serif'],
+                        hand: ['Caveat', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { color-scheme: dark; }
+        body {
+            background: #080808;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .text-outline-red {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(229, 9, 20, .58);
+        }
+        .bg-gradient-red-card {
+            background: linear-gradient(145deg, #a80a0f 0%, #680407 100%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #080808; }
+        ::-webkit-scrollbar-thumb { background: #292929; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #e50914; }
+        .menu-open { overflow: hidden; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-brand-red selection:text-white">
+    <div class="mx-auto w-full max-w-[1400px] px-4 py-5 sm:px-8 sm:py-7">
+        <header class="relative z-30 flex items-center justify-between border-b border-brand-border/70 pb-4">
+            <a href="#home" class="flex items-center gap-3" aria-label="Vorz Digital, kembali ke beranda">
+                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-red font-display text-xl">V</span>
+                <span class="text-xs font-bold tracking-[.2em]">VORZ<span class="text-brand-red">.</span>DIGITAL</span>
+            </a>
+            <nav id="main-nav" class="absolute left-0 right-0 top-[calc(100%+1px)] hidden flex-col gap-1 border-b border-brand-border bg-brand-bg p-4 md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0" aria-label="Navigasi utama">
+                <a class="nav-link py-3 text-xs uppercase tracking-widest text-gray-400 transition hover:text-white md:py-0" href="#layanan">Layanan</a>
+                <a class="nav-link py-3 text-xs uppercase tracking-widest text-gray-400 transition hover:text-white md:py-0" href="#proyek">Proyek</a>
+                <a class="nav-link py-3 text-xs uppercase tracking-widest text-gray-400 transition hover:text-white md:py-0" href="#proses">Proses</a>
+                <a class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-brand-red px-5 py-3 text-[11px] font-bold tracking-wider text-white transition hover:bg-red-700 md:mt-0" href="#kontak">
+                    MULAI PROYEK <span aria-hidden="true">↗</span>
+                </a>
+            </nav>
+            <button id="menu-toggle" class="flex h-10 w-10 items-center justify-center rounded-full border border-brand-border text-white md:hidden" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="main-nav">
+                <svg id="menu-icon" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16"/>
+                </svg>
+            </button>
+        </header>
+
+        <main>
+            <section id="home" class="relative overflow-hidden pb-16 pt-12 sm:pb-24 sm:pt-20">
+                <div class="pointer-events-none absolute inset-x-0 top-5 select-none text-center font-display text-[22vw] leading-none text-[#5d080b]/60 sm:top-8 sm:text-[19vw]" aria-hidden="true">DIGITAL</div>
+                <div class="relative grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+                    <div class="z-10 space-y-7 lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 rounded-full border border-brand-border bg-brand-card/80 px-3 py-2 text-[10px] font-semibold tracking-[.16em] text-gray-300">
+                            <span class="h-2 w-2 animate-pulse rounded-full bg-brand-red"></span>
+                            PARTNER DIGITAL UNTUK BISNIS YANG BERTUMBUH
+                        </div>
+                        <div>
+                            <span class="mb-1 block -rotate-2 font-hand text-3xl text-gray-300 sm:text-4xl">Dari ide jadi nyata</span>
+                            <h1 class="font-display text-[4.25rem] uppercase leading-[.84] tracking-tight sm:text-8xl lg:text-[7.5rem]">
+                                Website<span class="text-brand-red">.</span><br>
+                                Aplikasi<span class="text-outline-red">.</span>
+                            </h1>
+                        </div>
+                        <p class="max-w-xl text-sm leading-7 text-gray-400 sm:text-base">
+                            Kami merancang dan membangun website serta aplikasi yang terlihat profesional, mudah digunakan, dan siap membantu bisnis Anda melangkah lebih jauh.
+                        </p>
+                        <div class="flex flex-col gap-3 sm:flex-row">
+                            <a href="#kontak" class="inline-flex items-center justify-center gap-3 rounded-full bg-brand-red px-6 py-4 text-xs font-bold tracking-wider transition hover:bg-red-700">
+                                KONSULTASI GRATIS <span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="#proyek" class="inline-flex items-center justify-center gap-3 rounded-full border border-brand-border px-6 py-4 text-xs font-bold tracking-wider text-gray-300 transition hover:border-white hover:text-white">
+                                LIHAT KARYA KAMI <span aria-hidden="true">↓</span>
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-brand-border/70 pt-6 text-[10px] font-semibold tracking-widest text-gray-500">
+                            <span><span class="mr-2 text-brand-red">✦</span>DESAIN RESPONSIF</span>
+                            <span><span class="mr-2 text-brand-red">✦</span>SESUAI KEBUTUHAN</span>
+                            <span><span class="mr-2 text-brand-red">✦</span>SIAP DIKEMBANGKAN</span>
+                        </div>
+                    </div>
+
+                    <div class="relative mx-auto w-full max-w-lg lg:col-span-5 lg:max-w-none">
+                        <div class="absolute -inset-8 rounded-full bg-brand-red/10 blur-3xl"></div>
+                        <div class="relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card shadow-2xl">
+                            <div class="flex items-center justify-between border-b border-brand-border px-4 py-3">
+                                <div class="flex gap-1.5" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-brand-red"></span><span class="h-2 w-2 rounded-full bg-gray-600"></span><span class="h-2 w-2 rounded-full bg-gray-700"></span></div>
+                                <span class="text-[9px] tracking-widest text-gray-500">YOUR NEXT BIG IDEA</span>
+                                <span class="text-xs text-brand-red">↗</span>
+                            </div>
+                            <div class="relative aspect-[4/4.2] overflow-hidden">
+                                <img src="../urbanda.jpg" alt="Contoh tampilan website e-commerce yang kami kembangkan" class="h-full w-full object-cover opacity-75 transition duration-700 hover:scale-105 hover:opacity-100" onerror="this.src='https://placehold.co/800x900/121212/ffffff?text=Digital+Experience';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+                                <div class="absolute inset-x-0 bottom-0 p-5 sm:p-7">
+                                    <p class="mb-2 text-[10px] font-bold tracking-[.2em] text-brand-red">DESIGN · DEVELOPMENT · GROWTH</p>
+                                    <p class="font-display text-4xl uppercase leading-none sm:text-5xl">Ide bagus,<br>pengalaman lebih baik.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-5 -left-2 flex items-center gap-3 rounded-xl border border-brand-border bg-black/90 p-3 shadow-xl sm:-left-7 sm:p-4">
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-red/15 text-lg text-brand-red">✳</span>
+                            <div><p class="text-[10px] font-bold tracking-wider text-white">DIBUAT KHUSUS</p><p class="mt-1 text-[9px] text-gray-400">Bukan template biasa</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 border-y border-brand-border/70 py-5 text-[10px] font-bold tracking-[.2em] text-gray-500 sm:gap-x-14">
+                <span>WEBSITE BISNIS</span><span class="text-brand-red">✳</span><span>APLIKASI WEB</span><span class="text-brand-red">✳</span><span>E-COMMERCE</span><span class="text-brand-red">✳</span><span>UI/UX DESIGN</span>
+            </div>
+
+            <section id="layanan" class="space-y-8 py-20 sm:py-24">
+                <div class="flex flex-col justify-between gap-5 border-b border-brand-border pb-5 sm:flex-row sm:items-end">
+                    <div>
+                        <p class="mb-3 text-[10px] font-bold tracking-[.2em] text-brand-red">YANG BISA KAMI BANTU</p>
+                        <h2 class="font-display text-5xl uppercase leading-none sm:text-6xl">Solusi digital,<br class="sm:hidden"> tanpa ribet.</h2>
+                    </div>
+                    <p class="max-w-sm text-xs leading-6 text-gray-400">Mulai dari memperkenalkan bisnis hingga mengelola proses yang lebih kompleks — kami bantu pilih solusi yang paling pas.</p>
+                </div>
+                <div class="grid gap-4 md:grid-cols-3">
+                    <article class="group rounded-xl border border-brand-border bg-brand-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-red/60 sm:p-8">
+                        <span class="font-display text-3xl text-brand-red">01</span>
+                        <div class="my-7 flex h-12 w-12 items-center justify-center rounded-lg border border-brand-border text-brand-red">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5.75A1.75 1.75 0 014.75 4h14.5A1.75 1.75 0 0121 5.75v12.5A1.75 1.75 0 0119.25 20H4.75A1.75 1.75 0 013 18.25V5.75zM3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
+                        </div>
+                        <h3 class="font-display text-3xl uppercase">Website Bisnis</h3>
+                        <p class="mt-3 text-xs leading-6 text-gray-400">Website company profile dan landing page yang cepat, responsif, dan meyakinkan calon pelanggan Anda.</p>
+                        <p class="mt-6 border-t border-brand-border pt-4 text-[10px] font-semibold tracking-widest text-gray-500">COMPANY PROFILE · LANDING PAGE</p>
+                    </article>
+                    <article class="group rounded-xl border border-brand-border bg-brand-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-red/60 sm:p-8">
+                        <span class="font-display text-3xl text-brand-red">02</span>
+                        <div class="my-7 flex h-12 w-12 items-center justify-center rounded-lg border border-brand-border text-brand-red">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5.75A1.75 1.75 0 015.75 4h12.5A1.75 1.75 0 0120 5.75v12.5A1.75 1.75 0 0118.25 20H5.75A1.75 1.75 0 014 18.25V5.75zM8 8h8M8 12h3m-3 4h8"/></svg>
+                        </div>
+                        <h3 class="font-display text-3xl uppercase">Aplikasi Web</h3>
+                        <p class="mt-3 text-xs leading-6 text-gray-400">Aplikasi sesuai alur kerja bisnis Anda, dari dashboard internal hingga sistem informasi yang terintegrasi.</p>
+                        <p class="mt-6 border-t border-brand-border pt-4 text-[10px] font-semibold tracking-widest text-gray-500">DASHBOARD · SISTEM INFORMASI</p>
+                    </article>
+                    <article class="group rounded-xl border border-brand-border bg-brand-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-red/60 sm:p-8">
+                        <span class="font-display text-3xl text-brand-red">03</span>
+                        <div class="my-7 flex h-12 w-12 items-center justify-center rounded-lg border border-brand-border text-brand-red">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5h16v14H4zM8 9h8m-8 3h5m-5 3h8M7 5V3m10 2V3"/></svg>
+                        </div>
+                        <h3 class="font-display text-3xl uppercase">Toko Online</h3>
+                        <p class="mt-3 text-xs leading-6 text-gray-400">Pengalaman belanja online yang nyaman, katalog produk tertata, dan alur pemesanan yang jelas.</p>
+                        <p class="mt-6 border-t border-brand-border pt-4 text-[10px] font-semibold tracking-widest text-gray-500">E-COMMERCE · KATALOG PRODUK</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="proyek" class="space-y-7 py-10 sm:py-14">
+                <div class="flex items-end justify-between border-b border-brand-border pb-4">
+                    <div>
+                        <p class="mb-2 text-[10px] font-bold tracking-[.2em] text-brand-red">HASIL KOLABORASI</p>
+                        <h2 class="font-display text-5xl uppercase sm:text-6xl">Proyek pilihan</h2>
+                    </div>
+                    <span class="hidden text-[10px] tracking-widest text-gray-500 sm:block">DESAIN YANG PUNYA TUJUAN ↘</span>
+                </div>
+                <div class="grid gap-5 md:grid-cols-3">
+                    <article class="group">
+                        <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-brand-border bg-brand-card">
+                            <img src="../doc.jpg" alt="Website digitalisasi desa" class="h-full w-full object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='https://placehold.co/800x600/171717/ffffff?text=Village+Digitalization';">
+                            <span class="absolute left-3 top-3 rounded-full border border-white/10 bg-black/70 px-3 py-1.5 text-[9px] tracking-widest">WEBSITE</span>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4">
+                            <span class="font-display text-2xl text-brand-red">01</span>
+                            <div><h3 class="text-xs font-bold tracking-wider">DIGITALIZATION VILLAGE</h3><p class="mt-1 text-[10px] uppercase tracking-widest text-gray-500">Informasi & layanan desa</p></div>
+                        </div>
+                    </article>
+                    <article class="group">
+                        <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-brand-border bg-brand-card">
+                            <img src="../urbanda.jpg" alt="Website e-commerce Urbanda" class="h-full w-full object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='https://placehold.co/800x600/171717/ffffff?text=Urbanda+E-commerce';">
+                            <span class="absolute left-3 top-3 rounded-full border border-white/10 bg-black/70 px-3 py-1.5 text-[9px] tracking-widest">E-COMMERCE</span>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4">
+                            <span class="font-display text-2xl text-brand-red">02</span>
+                            <div><h3 class="text-xs font-bold tracking-wider">URBANDA</h3><p class="mt-1 text-[10px] uppercase tracking-widest text-gray-500">Toko online & katalog produk</p></div>
+                        </div>
+                    </article>
+                    <article class="group">
+                        <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-brand-border bg-brand-card">
+                            <img src="../inventory.jpeg" alt="Aplikasi web manajemen inventaris" class="h-full w-full object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='https://placehold.co/800x600/171717/ffffff?text=V-Inventory';">
+                            <span class="absolute left-3 top-3 rounded-full border border-white/10 bg-black/70 px-3 py-1.5 text-[9px] tracking-widest">APLIKASI WEB</span>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4">
+                            <span class="font-display text-2xl text-brand-red">03</span>
+                            <div><h3 class="text-xs font-bold tracking-wider">V-INVENTORY</h3><p class="mt-1 text-[10px] uppercase tracking-widest text-gray-500">Sistem manajemen inventaris</p></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="proses" class="grid gap-10 py-20 lg:grid-cols-12 lg:py-24">
+                <div class="space-y-5 lg:col-span-4">
+                    <p class="text-[10px] font-bold tracking-[.2em] text-brand-red">SIMPLE, TRANSPARAN, TERARAH</p>
+                    <h2 class="font-display text-5xl uppercase leading-[.95] sm:text-6xl">Dari ngobrol<br>hingga online.</h2>
+                    <p class="max-w-sm text-xs leading-6 text-gray-400">Anda selalu tahu apa yang sedang dikerjakan dan apa langkah berikutnya. Tidak ada proses yang membingungkan.</p>
+                </div>
+                <div class="relative space-y-0 lg:col-span-5">
+                    <div class="absolute bottom-8 left-[1.15rem] top-8 w-px bg-brand-border"></div>
+                    <div class="relative flex gap-5 border-b border-brand-border/70 py-5">
+                        <span class="z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand-red/60 bg-brand-bg font-display text-sm text-brand-red">01</span>
+                        <div><h3 class="text-xs font-bold tracking-widest">DISKUSI KEBUTUHAN</h3><p class="mt-2 text-xs leading-5 text-gray-400">Ceritakan tujuan, ide, dan tantangan bisnis Anda.</p></div>
+                    </div>
+                    <div class="relative flex gap-5 border-b border-brand-border/70 py-5">
+                        <span class="z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand-red/60 bg-brand-bg font-display text-sm text-brand-red">02</span>
+                        <div><h3 class="text-xs font-bold tracking-widest">RANCANGAN & PENAWARAN</h3><p class="mt-2 text-xs leading-5 text-gray-400">Kami susun solusi, ruang lingkup, dan estimasi proyek.</p></div>
+                    </div>
+                    <div class="relative flex gap-5 border-b border-brand-border/70 py-5">
+                        <span class="z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand-red/60 bg-brand-bg font-display text-sm text-brand-red">03</span>
+                        <div><h3 class="text-xs font-bold tracking-widest">DESAIN & PENGEMBANGAN</h3><p class="mt-2 text-xs leading-5 text-gray-400">Solusi dibangun, diuji, dan disempurnakan bersama Anda.</p></div>
+                    </div>
+                    <div class="relative flex gap-5 py-5">
+                        <span class="z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand-red/60 bg-brand-bg font-display text-sm text-brand-red">04</span>
+                        <div><h3 class="text-xs font-bold tracking-widest">PELUNCURAN & DUKUNGAN</h3><p class="mt-2 text-xs leading-5 text-gray-400">Produk online, siap digunakan, dan siap berkembang.</p></div>
+                    </div>
+                </div>
+                <aside class="flex min-h-[310px] flex-col justify-between overflow-hidden rounded-xl bg-gradient-red-card p-7 sm:p-8 lg:col-span-3">
+                    <span class="text-5xl leading-none opacity-80" aria-hidden="true">“</span>
+                    <div class="relative z-10 space-y-5">
+                        <p class="font-display text-3xl uppercase leading-tight sm:text-4xl">Teknologi yang bekerja untuk bisnis Anda.</p>
+                        <p class="text-xs leading-5 text-white/75">Bukan sekadar terlihat bagus. Dibangun untuk menyelesaikan kebutuhan nyata.</p>
+                    </div>
+                    <span class="border-t border-white/20 pt-4 text-[9px] font-bold tracking-widest text-white/75">VORZ DIGITAL STUDIO <span class="float-right">✳</span></span>
+                </aside>
+            </section>
+
+            <section id="kontak" class="relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card p-6 sm:p-10 lg:p-12">
+                <div class="pointer-events-none absolute -right-10 -top-20 h-64 w-64 rounded-full bg-brand-red/10 blur-3xl"></div>
+                <div class="relative flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
+                    <div class="max-w-2xl space-y-4">
+                        <p class="text-[10px] font-bold tracking-[.2em] text-brand-red">PUNYA IDE? MARI WUJUDKAN.</p>
+                        <h2 class="font-display text-4xl uppercase leading-none sm:text-6xl">Bisnis Anda layak<br>punya yang terbaik.</h2>
+                        <p class="text-xs leading-6 text-gray-400 sm:text-sm">Ceritakan kebutuhan Anda. Kita mulai dengan obrolan singkat dan konsultasi tanpa biaya.</p>
+                    </div>
+                    <a href="https://wa.me/6281359331734?text=Halo%20Vorz%20Digital%2C%20saya%20ingin%20konsultasi%20tentang%20website%20atau%20aplikasi." target="_blank" rel="noopener noreferrer" class="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 text-xs font-bold tracking-wider text-black transition hover:bg-[#20bd5a] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-brand-card">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.48 0 .13 5.34.13 11.92c0 2.1.55 4.15 1.59 5.96L.03 24l6.27-1.64a11.9 11.9 0 0 0 5.76 1.47h.01c6.57 0 11.92-5.35 11.92-11.92a11.85 11.85 0 0 0-3.47-8.43ZM12.07 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.98.99-3.63-.23-.37a9.88 9.88 0 0 1-1.52-5.27c0-5.45 4.44-9.89 9.9-9.89a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.9 7c0 5.45-4.45 9.87-9.91 9.87Zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+                        CHAT VIA WHATSAPP <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-brand-border/60 py-6 text-center sm:flex-row sm:text-left">
+            <a href="#home" class="text-[10px] font-bold tracking-[.2em] text-gray-400">© <span id="year"></span> VORZ DIGITAL. DIBUAT DENGAN TUJUAN.</a>
+            <div class="flex items-center gap-5 text-[10px] tracking-widest text-gray-500">
+                <a href="https://www.instagram.com/vorz_dev" target="_blank" rel="noopener noreferrer" class="transition hover:text-brand-red">INSTAGRAM ↗</a>
+                <a href="#kontak" class="transition hover:text-brand-red">HUBUNGI KAMI ↗</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setMenuOpen(isOpen) {
+            mainNav.classList.toggle('hidden', !isOpen);
+            mainNav.classList.toggle('flex', isOpen);
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? 'Tutup navigasi' : 'Buka navigasi');
+            document.body.classList.toggle('menu-open', isOpen);
+        }
+
+        menuToggle.addEventListener('click', () => {
+            setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+        });
+
+        mainNav.querySelectorAll('.nav-link').forEach((link) => {
+            link.addEventListener('click', () => setMenuOpen(false));
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) setMenuOpen(false);
+        });
+    </script>
+</body>
+</html>
